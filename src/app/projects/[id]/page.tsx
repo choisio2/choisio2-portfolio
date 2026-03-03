@@ -6,6 +6,8 @@ import { projects } from '@/data/projects';
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const runtime = 'edge';
+
 export default function ProjectDetailPage() {
   const params = useParams();
   const router = useRouter();
