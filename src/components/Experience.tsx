@@ -1,4 +1,6 @@
-import AnimatedSection from './AnimatedSection';
+"use client";
+
+import { motion } from 'framer-motion';
 
 const experiences = {
   "Tech & Development": [
@@ -15,29 +17,56 @@ const experiences = {
 
 const Experience = () => {
   return (
-    <AnimatedSection>
-      <div id="experience" className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Experience & Leadership</h2>
-        <div className="space-y-12">
-          {Object.entries(experiences).map(([category, items]) => (
+    <section id="experience" className="py-32 relative overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
+        <motion.h2 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-5xl md:text-6xl font-black text-center mb-24 text-white"
+        >
+          Experience
+        </motion.h2>
+
+        <div className="space-y-24">
+          {Object.entries(experiences).map(([category, items], catIdx) => (
             <div key={category}>
-              <h3 className="text-2xl font-bold text-electric-blue mb-6 text-center md:text-left">{category}</h3>
-              <div className="space-y-6">
+              <motion.h3 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="text-[10px] font-black text-matcha mb-12 tracking-[0.4em] uppercase flex items-center"
+              >
+                <span className="w-12 h-[2px] bg-matcha mr-6" />
+                {category}
+              </motion.h3>
+
+              <div className="space-y-8">
                 {items.map((exp, index) => (
-                  <div key={index} className="flex flex-col md:flex-row justify-between items-start md:items-center bg-gray-800/50 p-4 rounded-lg">
+                  <motion.div 
+                    key={index} 
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    whileHover={{ x: 10 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex flex-col md:flex-row justify-between items-start md:items-center glass p-8 rounded-2xl group transition-all duration-300"
+                  >
                     <div>
-                      <p className="font-bold text-lg">{exp.name}</p>
-                      <p className="text-gray-400">{exp.role}</p>
+                      <p className="font-black text-2xl text-white group-hover:text-matcha transition-colors mb-2">{exp.name}</p>
+                      <p className="text-frost font-bold opacity-80">{exp.role}</p>
                     </div>
-                    <p className="text-gray-500 mt-2 md:mt-0">{exp.duration}</p>
-                  </div>
+                    <div className="mt-4 md:mt-0 text-xs text-matcha font-black tracking-widest bg-matcha/10 px-4 py-2 rounded-lg border border-matcha/10">
+                      {exp.duration}
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
           ))}
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
 };
 

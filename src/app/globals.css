@@ -1,14 +1,78 @@
-/* Tailwind v4 최신 불러오기 방식 */
 @import "tailwindcss";
 
-/* 기본 배경 및 폰트 색상 강제 지정 (에러 원천 차단) */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
-    background-color: #0F172A; /* 네이비 배경 */
-    color: #D1D5DB; /* text-gray-300의 실제 색상 코드 */
+    background-color: #0f1218;
+    color: #e2e8f0; 
+    font-family: 'Pretendard', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+  }
+  /* 뒷배경 점 패턴 추가 */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(153, 166, 97, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .text-matcha {
+    color: #5bbddb;
+  }
+  .bg-matcha {
+    background-color: #e6a084;
+  }
+  .border-matcha {
+    border-color: #84E6A4;
+  }
+  .text-frost {
+    color: #C4CBDC;
+  }
+  .bg-frost {
+    background-color: #C4CBDC;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-dark {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link-effect {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-link-effect::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #99A661;
+    transition: width 0.3s ease;
+  }
+  .nav-link-effect:hover::after {
+    width: 100%;
   }
 }
 

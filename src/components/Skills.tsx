@@ -1,4 +1,6 @@
-import AnimatedSection from './AnimatedSection';
+"use client";
+
+import { motion } from 'framer-motion';
 import { FaPython, FaJava, FaGitAlt, FaGithub } from 'react-icons/fa6';
 import { SiC, SiCplusplus, SiKotlin, SiCloudflare, SiFirebase } from "react-icons/si";
 
@@ -14,34 +16,59 @@ const skills = {
     { name: 'Git', icon: <FaGitAlt size={40} /> },
     { name: 'GitHub', icon: <FaGithub size={40} /> },
   ],
-  "Deployment & BaaS": [
+  "Deployment": [
     { name: 'Cloudflare', icon: <SiCloudflare size={40} /> },
-    { name: 'Firebase (Auth)', icon: <SiFirebase size={40} /> },
+    { name: 'Firebase', icon: <SiFirebase size={40} /> },
   ],
 };
 
 const Skills = () => {
   return (
-    <AnimatedSection>
-      <div id="skills" className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
-        <div className="space-y-12">
-          {Object.entries(skills).map(([category, items]) => (
+    <section id="skills" className="py-32 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <motion.h2 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-5xl md:text-6xl font-black text-center mb-24 text-white"
+        >
+          Skills
+        </motion.h2>
+
+        <div className="space-y-24">
+          {Object.entries(skills).map(([category, items], catIdx) => (
             <div key={category}>
-              <h3 className="text-xl font-bold text-electric-blue mb-6">{category}</h3>
-              <div className="flex flex-wrap gap-8">
-                {items.map((skill) => (
-                  <div key={skill.name} className="flex flex-col items-center gap-2 p-4 bg-gray-800/50 rounded-lg w-32">
-                    <div className="text-gray-300">{skill.icon}</div>
-                    <p className="font-semibold">{skill.name}</p>
-                  </div>
+              <motion.h3 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="text-xl font-black text-matcha mb-10 border-l-4 border-matcha pl-6 tracking-widest uppercase"
+              >
+                {category}
+              </motion.h3>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {items.map((skill, idx) => (
+                  <motion.div 
+                    key={skill.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.05 }}
+                    className="flex flex-col items-center gap-5 p-8 glass rounded-3xl transition-all duration-300"
+                  >
+                    <div className="text-frost">
+                      {skill.icon}
+                    </div>
+                    <p className="font-black text-xs tracking-[0.2em] text-frost/80 uppercase">{skill.name}</p>
+                  </motion.div>
                 ))}
               </div>
             </div>
           ))}
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
 };
 

@@ -1,34 +1,45 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'About', href: '#about' },
+    { name: 'Archiving', href: '#archiving' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy/80 backdrop-blur-sm shadow-md">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-bold text-electric-blue">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'glass-dark py-4 shadow-xl' : 'bg-transparent py-8'}`}>
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="text-2xl font-black text-matcha tracking-tighter">
             Sio2.dev
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-10">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-gray-300 hover:text-electric-blue transition-colors duration-300"
+                className="text-xs font-black uppercase tracking-[0.2em] text-frost nav-link-effect hover:text-matcha"
               >
                 {link.name}
               </a>
@@ -37,30 +48,37 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 focus:outline-none">
-              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-400 p-2 focus:outline-none">
+              {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-navy">
-          <nav className="flex flex-col items-center py-4">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                className="py-2 text-gray-300 hover:text-electric-blue transition-colors duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden glass-dark mt-2"
+          >
+            <nav className="flex flex-col items-center py-12 space-y-8">
+              {navLinks.map((link) => (
+                <a 
+                  key={link.name} 
+                  href={link.href}
+                  className="text-sm font-black uppercase tracking-[0.3em] text-frost hover:text-matcha transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
