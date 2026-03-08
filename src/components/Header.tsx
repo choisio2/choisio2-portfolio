@@ -30,7 +30,7 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-black text-matcha tracking-tighter">
-            Sio2.dev
+            Choisio2.dev
           </Link>
           
           {/* Desktop Navigation */}

@@ -5,7 +5,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #0f1218;
+    background-color: #0F172A;
     color: #e2e8f0; 
     font-family: 'Pretendard', sans-serif;
     position: relative;
@@ -27,15 +27,10 @@
 }
 
 @layer utilities {
-  .text-matcha {
-    color: #5bbddb;
-  }
-  .bg-matcha {
-    background-color: #e6a084;
-  }
-  .border-matcha {
-    border-color: #84E6A4;
-  }
+  .text-matcha { color: #38BDF8; }      /* 스카이 블루 - 메인 */
+  .bg-matcha { background-color: #8aabfe8f; }
+  .border-matcha { border-color: #ff9e0d; }
+
   .text-frost {
     color: #C4CBDC;
   }

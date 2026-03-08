@@ -23,14 +23,14 @@ const Archiving = () => {
               icon: <FaGithub size={40} />, 
               link: 'https://github.com/choisio2', 
               desc: '소스 코드 저장소입니다.',
-              items: ['과거 프로젝트 소스 코드', '학습 내용 기록', '오픈소스 기여 및 협업']
+              items: ['프로젝트 소스 코드', '과제 코드 기록', '프로젝트 협업 기여']
             },
             { 
               name: 'Tistory', 
               icon: <FaBloggerB size={40} />, 
               link: 'https://sio2-dev.tistory.com/', 
-              desc: '학습 및 개발 블로그입니다.',
-              items: ['문제 해결 과정 기록', '신기술 학습 정리', '프로젝트 회고']
+              desc: '개발 블로그입니다.',
+              items: ['프로젝트 회고', '문제 해결 과정 기록', '스터디 내용 정리']
             }
           ].map((item, idx) => (
             <motion.a 
@@ -64,7 +64,7 @@ const Archiving = () => {
                 ))}
               </ul>
 
-              <div className="mt-8 flex items-center text-matcha font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="mt-8 flex items-center text-matcha font-bold text-sm transition-opacity duration-300">
                 <span>View More</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

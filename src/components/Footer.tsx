@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="bg-navy py-12 border-t border-white/5 mt-20">
       <div className="container mx-auto px-4 text-center">
         <p className="text-gray-400 font-bold mb-2">
-          &copy; {new Date().getFullYear()} <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-orange-400">Choi Sujeong</span>. All Rights Reserved.
+          &copy; {new Date().getFullYear()} <span className="text-matcha">Choi Sujeong</span>. All Rights Reserved.
         </p>
         <p className="text-xs text-gray-600 tracking-widest uppercase">
           Crafted with Next.js, Tailwind CSS & Framer Motion

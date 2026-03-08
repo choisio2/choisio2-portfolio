@@ -17,11 +17,11 @@ export const projects: Project[] = [
     duration: "2025.11 ~ 2026.01",
     team: "8인 팀 프로젝트 (Front-End 2, Back-End 2, Data 1, Design 3)",
     position: "안드로이드 프론트엔드 개발 (Kotlin)",
-    description: "사용자의 위치, 주변 소음, 목표를 종합적으로 분석해 상황(맥락)에 맞는 음악을 추천해 주는 맞춤형 안드로이드 애플리케이션",
+    description: "사용자의 위치, 주변 소음, 목표를 종합적으로 분석해 상황에 맞는 음악을 추천해 주는 맞춤형 안드로이드 애플리케이션",
     stack: "프론트엔드: Kotlin, Android Studio | 백엔드: Spring Boot, MySQL",
     features: [
-      "기기 마이크를 활용한 주변 소음(데시벨) 측정 기능 및 위치 기반 로직 구현",
-      "Spotify SDK를 연동하여 사용자의 아티스트/장르 취향을 반영하고, 생성된 플레이리스트로 바로 이동할 수 있도록 딥링크(Deep Link) 구현",
+      "기기 마이크를 활용한 주변 소음 측정 기능 및 위치 기반 로직 구현",
+      "Spotify API를 연동하여 사용자의 아티스트 취향을 반영하고, 생성된 플레이리스트로 바로 이동할 수 있도록 딥링크(Deep Link) 구현",
       "플레이리스트 결과 화면에서 사용자 맞춤형 화면(리스트형 및 갤러리형) 및 마음에 드는 플레이리스트를 라이브러리에 저장하는 기능 구현",
     ],
     achievements: [
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     team: "개인 프로젝트",
     position: "간단한 앱 개발",
     description: "중위 표기법(Infix)을 후위 표기법(Postfix)으로 변환하는 알고리즘을 활용한 계산기",
-    stack: "Kotlin++",
+    stack: "Kotlin",
     features: [
         "중위 표기법(Infix)을 후위 표기법(Postfix)으로 변환하는 알고리즘을 활용한 연산 로직 구현",
     ],
