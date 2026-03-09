@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: "dip",
     title: "DIP (AI 노래 추천 애플리케이션)",
-    duration: "2025.11 ~ 2026.01",
+    duration: "2025.10 ~ 2026.01",
     team: "8인 팀 프로젝트 (Front-End 2, Back-End 2, Data 1, Design 3)",
     position: "안드로이드 프론트엔드 개발 (Kotlin)",
     description: "사용자의 위치, 주변 소음, 목표를 종합적으로 분석해 상황에 맞는 음악을 추천해 주는 맞춤형 안드로이드 애플리케이션",
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     id: "bdai",
     title: "[BDAI] 학습자 수료 예측 AI 경진대회",
-    duration: "2026.01 ~ 2025.02",
+    duration: "2025.09 ~ 2026.02",
     team: "개인",
     position: "AI 알고리즘 개발",
     description: "학습자의 수료 여부를 예측하는 AI 알고리즘 개발. 데이콘 x BDA 제 2회 학습자 수료 예측 AI 경진대회",

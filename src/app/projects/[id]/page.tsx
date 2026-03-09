@@ -134,7 +134,7 @@ export default function ProjectDetailPage() {
                   <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
                     <h3 className="text-white font-bold text-xl mb-2 flex items-center">
                       <span className="w-2 h-2 rounded-full bg-[#3B82F6] mr-3"></span>
-                      Spotify SDK 연동 및 딥링크(Deep Link) 구현
+                      Spotify API 연동 및 딥링크(Deep Link) 구현
                     </h3>
                     <p className="text-gray-400 leading-relaxed pl-5">
                     외부 API인 Spotify API를 연동하여 사용자의 아티스트 취향 데이터와 플레이리스트 커버 이미지를 매핑했습니다. 생성된 맞춤형 플레이리스트를 재생하기 위해 Spotify 앱의 해당 플레이리스트로 즉시 이동하도록 딥링크를 구현하여 UX을 개선했습니다.
