@@ -24,7 +24,7 @@ const Archiving = () => {
           transition={{ delay: 0.2 }}
           className="text-center text-frost/60 text-base leading-relaxed mb-24"
         >
-          진행한 프로젝트의 개발 과정, 트러블슈팅, 회고를 블로그에 상세히 정리해두었어요.{' '}
+          진행한 프로젝트의 개발 과정, 트러블슈팅, 회고를 블로그에 상세히 정리했습니다.{' '}
           <span className="text-matcha font-bold">꼭 들어가서 확인해주세요! 🙇‍♀️</span>
         </motion.p>
 

@@ -61,7 +61,7 @@ export default function ProjectDetailPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
             <div className="space-y-8">
               <div>
-                <h2 className="text-[10px] font-black text-[#3B82F6] uppercase tracking-[0.4em] mb-4">Role & Team</h2>
+                <h2 className="text-sm font-black text-[#3B82F6] uppercase tracking-[0.25em] mb-4">Role & Team</h2>
                 <div className="space-y-2">
                   <p className="text-xl font-bold text-white">{project.position}</p>
                   <p className="text-gray-400 font-medium">{project.team}</p>
@@ -69,13 +69,13 @@ export default function ProjectDetailPage() {
               </div>
 
               <div>
-                <h2 className="text-[10px] font-black text-[#3B82F6] uppercase tracking-[0.4em] mb-4">Tech Stack</h2>
+                <h2 className="text-sm font-black text-[#3B82F6] uppercase tracking-[0.25em] mb-4">Tech Stack</h2>
                 <p className="text-gray-300 font-bold text-lg">{project.stack}</p>
               </div>
             </div>
 
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10">
-              <h2 className="text-[10px] font-black text-white uppercase tracking-[0.4em] mb-6">Overview</h2>
+              <h2 className="text-sm font-black text-white uppercase tracking-[0.25em] mb-6">Overview</h2>
               <p className="text-gray-300 leading-relaxed font-medium">
                 {project.description}
               </p>

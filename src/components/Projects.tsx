@@ -43,15 +43,14 @@ const Projects = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
                 <div>
                   <div className="flex flex-wrap gap-4 mb-10">
-                    <span className="text-frost text-[10px] font-black uppercase tracking-widest bg-white/5 px-4 py-2 rounded-lg border border-white/5">{project.team}</span>
-                    <span className="text-matcha text-[10px] font-black uppercase tracking-widest bg-matcha/10 px-4 py-2 rounded-lg border border-matcha/10">{project.position}</span>
+                    <span className="text-frost text-xs font-black uppercase tracking-widest bg-white/5 px-4 py-2 rounded-lg border border-white/5">{project.team}</span>
+                    <span className="text-matcha text-xs font-black uppercase tracking-widest bg-matcha/10 px-4 py-2 rounded-lg border border-matcha/10">{project.position}</span>
                   </div>
                   
                   <p className="text-xl text-frost/90 leading-relaxed mb-12 font-medium">{project.description}</p>
                   
                   <div className="mb-12">
-                    <h4 className="text-[10px] font-black text-matcha uppercase tracking-[0.3em] mb-6 flex items-center">
-                      <span className="w-8 h-[1px] bg-matcha/30 mr-3" />
+                    <h4 className="text-sm font-black text-matcha uppercase tracking-[0.25em] mb-6">
                       Tech Stack
                     </h4>
                     <p className="text-frost font-bold text-lg">{project.stack}</p>
@@ -76,7 +75,7 @@ const Projects = () => {
                 <div className="space-y-12">
                   {project.features.length > 0 && 
                     <div>
-                      <h4 className="text-[10px] font-black text-white uppercase tracking-[0.3em] mb-8">Key Features</h4>
+                      <h4 className="text-sm font-black text-white uppercase tracking-[0.25em] mb-8">Key Features</h4>
                       <ul className="space-y-6">
                         {project.features.map((feature, i) => (
                           <li key={i} className="flex items-start text-frost/80 leading-relaxed text-sm group/item">
@@ -90,7 +89,7 @@ const Projects = () => {
                   
                   {project.achievements.length > 0 &&
                     <div className="glass-dark p-8 rounded-3xl border border-matcha/20">
-                      <h4 className="text-[10px] font-black text-matcha uppercase tracking-[0.3em] mb-6">Achievements</h4>
+                      <h4 className="text-sm font-black text-matcha uppercase tracking-[0.25em] mb-6">Achievements</h4>
                       <ul className="space-y-4">
                          {project.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start text-white text-sm font-bold leading-relaxed">

@@ -72,9 +72,8 @@ const Experience = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="text-[10px] font-black text-matcha mb-12 tracking-[0.4em] uppercase flex items-center"
+                className="text-sm font-black text-matcha mb-12 tracking-[0.25em] uppercase"
               >
-                <span className="w-12 h-[2px] bg-matcha mr-6" />
                 {category}
               </motion.h3>
 
