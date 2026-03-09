@@ -40,7 +40,7 @@ const About = () => {
                 }}
               />
               {/* 사진 없을 때 fallback 이모지 */}
-              <span className="text-5xl absolute">👩‍💻</span>
+              <span className="text-5xl absolute"></span>
             </div>
           </div>
 

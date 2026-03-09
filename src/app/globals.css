@@ -28,8 +28,8 @@
 
 @layer utilities {
   .text-matcha { color: #38BDF8; }      /* 스카이 블루 - 메인 */
-  .bg-matcha { background-color: #8aabfe8f; }
-  .border-matcha { border-color: #aae5fc; }
+  .bg-matcha { background-color: #93e7f68f; }
+  .border-matcha { border-color: #2974ff; }
 
   .text-frost {
     color: #C4CBDC;
