@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const About = () => {
   return (
@@ -24,23 +23,10 @@ const About = () => {
           transition={{ duration: 0.7 }}
           className="glass p-10 rounded-[2.5rem] mb-8 flex flex-col md:flex-row items-center md:items-start gap-10"
         >
-          {/* 프로필 사진 */}
+          {/* 프로필 이모지 */}
           <div className="shrink-0">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-matcha/30 shadow-lg shadow-matcha/10 bg-white/5 flex items-center justify-center">
-              {/* 본인 사진으로 교체: src에 실제 이미지 경로 넣어주세요 */}
-              <Image
-                src="/images/profile.jpg"
-                alt="최수정 프로필"
-                width={160}
-                height={160}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  // 사진 없을 때 fallback
-                  (e.target as HTMLImageElement).style.display = 'none';
-                }}
-              />
-              {/* 사진 없을 때 fallback 이모지 */}
-              <span className="text-5xl absolute"></span>
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-matcha/30 shadow-lg shadow-matcha/10 bg-white/5 flex items-center justify-center">
+              <span className="text-6xl md:text-7xl">👩‍💻</span>
             </div>
           </div>
 
