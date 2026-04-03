@@ -287,7 +287,7 @@ export default function ProjectDetailPage() {
                       도메인 기반 Feature Engineering
                     </h3>
                     <p className="text-gray-400 leading-relaxed pl-5">
-                      단순 원핫 인코딩에 그치지 않고, <span className="text-white font-semibold">IT/Data 전공 여부(is_major_it)</span> 파생 변수를 직접 설계했습니다. 또한 학교명(school1)처럼 카디널리티가 높은 범주형 컬럼에 <span className="text-white font-semibold">Frequency Encoding</span>을 적용하여 트리 모델이 효과적으로 학습할 수 있도록 처리했습니다.
+                      단순 원핫 인코딩에 그치지 않고, <span className="text-white font-semibold">IT/Data 전공 여부</span> 파생 변수를 직접 설계했습니다. 또한 학교명처럼 카디널리티가 높은 범주형 컬럼에 <span className="text-white font-semibold">Frequency Encoding</span>을 적용하여 트리 모델이 효과적으로 학습할 수 있도록 처리했습니다.
                     </p>
                   </div>
 
@@ -297,7 +297,7 @@ export default function ProjectDetailPage() {
                       RandomForest Feature Importance 기반 피처 선별
                     </h3>
                     <p className="text-gray-400 leading-relaxed pl-5">
-                      임시 RandomForest 모델을 학습시켜 <span className="text-white font-semibold">feature_importances_</span>를 산출하고 상위 40개 피처만 최종 모델에 투입했습니다. Top 5 피처는 <span className="text-white font-semibold">interested_company, incumbents_lecture_scale_reason, school1_freq, desired_job, school1</span> 순으로 확인되었습니다.
+                      임시 RandomForest 모델을 학습시켜 <span className="text-white font-semibold">feature_importances_</span>를 산출하고 상위 40개 피처만 최종 모델에 투입했습니다.
                     </p>
                   </div>
                 </div>
